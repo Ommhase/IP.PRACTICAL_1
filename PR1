@@ -1,0 +1,82 @@
+# --- Q1: Variable Creation and Naming Rules ---
+name = "Asha"
+age = 18
+marks = 91.5
+city = "Pune"
+print("Q1:", name, age, marks, city)
+# Invalid examples (commented out to prevent syntax errors):
+# 1name = "Asha"   -> Cannot start with a number
+# class = "FY"     -> Cannot use reserved keywords
+# my-name = "Asha" -> Hyphens are not allowed
+
+# --- Q2: Dynamic Typing in Python ---
+var = 10
+print("Q2 Int:", var, type(var))
+var = "Hello Python"
+print("Q2 Str:", var, type(var))
+var = 25.5
+print("Q2 Float:", var, type(var))
+
+# --- Q3: Constants Simulation ---
+PI = 3.14159
+GRAVITY = 9.8
+MAX_USERS = 100
+print("Q3 Constants:", PI, GRAVITY, MAX_USERS)
+# Python does not enforce constants; uppercase is a naming convention.
+
+# --- Q4: Data Type Identification System ---
+i_val = 42
+f_val = 3.14
+s_val = "VSIT"
+b_val = True
+print(f"Q4 Summary -> {i_val}: {type(i_val)}, {f_val}: {type(f_val)}, {s_val}: {type(s_val)}, {b_val}: {type(b_val)}")
+
+# --- Q5: Type Conversion (Casting) ---
+age_input = "18"
+marks_input = "85.5"
+total = int(age_input) + float(marks_input)
+print("Q5 Converted Sum:", total)
+
+# --- Q6: Implicit vs Explicit Type Conversion ---
+imp_res = 10 + 5.5  # Implicit: int + float becomes float
+exp_res = 10 + int("20")  # Explicit: str converted to int
+print("Q6 Implicit:", imp_res, "| Explicit:", exp_res)
+
+# --- Q7: Memory Behavior of Variables ---
+x = 100
+y = 100
+print("Q7 Same ID:", id(x) == id(y))
+x = x + 1
+print("Q7 ID after modification:", id(x) == id(y))
+
+# --- Q8: Swapping Variables Using Multiple Methods ---
+a, b = 5, 10
+# Method 1: Using third variable
+temp = a
+a = b
+b = temp
+print("Q8 Swap (Temp):", a, b)
+# Method 2: Tuple unpacking
+a, b = b, a
+print("Q8 Swap (Tuple):", a, b)
+
+# --- Q9: Data Type-Based Calculator ---
+in1 = "15"
+in2 = "25"
+if in1.isdigit() and in2.isdigit():
+    print("Q9 Numeric Addition:", int(in1) + int(in2))
+else:
+    print("Q9 String Concatenation:", in1 + in2)
+
+# --- Q10: Boolean Logic and Data Types ---
+user_age = 20
+user_marks = 65
+is_adult = user_age > 18
+is_pass = user_marks > 50
+if is_adult and is_pass:
+    print("Q10: Eligible and Passed")
+
+# --- Q11: Temperature Converter (Celsius to Fahrenheit) ---
+celsius = 37.0
+fahrenheit = (celsius * 9/5) + 32
+print(f"Q11: {celsius}°C is equal to {fahrenheit:.2f}°F")
