@@ -1,229 +1,121 @@
-# ==========================================================
-# Question 1: Variable Creation and Naming Rules
-# ==========================================================
-# Valid variables
-name = "Om"
-age = 19
-marks = 90
-city = "Pune"
+<!-- ==========================================================
+     PRACTICAL 1: HTML STRUCTURE, TEXT FORMATTING AND LISTS
+     ========================================================== -->
 
-# Displaying values
-print("--- Question 1 ---")
-print("name:", name)
-print("age:", age)
-print("marks:", marks)
-print("city:", city)
-
-
-# ==========================================================
-# Question 2: Dynamic Typing in Python
-# ==========================================================
-print("\n--- Question 2 ---")
-# Assign an integer value
-x = 10
-print("Value:", x)
-print("Type after integer assignment:", type(x))
-
-# Reassign to a string
-x = "Hello"
-print("\nValue:", x)
-print("Type after string assignment:", type(x))
-
-# Reassign to a float
-x = 3.14
-print("\nValue:", x)
-print("Type after float assignment:", type(x))
+<!-- ==========================================================
+     Question 1: Basic Webpage Structure
+     ========================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emerging Technologies Portal</title>
+</head>
+<body>
+    <h1>Emerging Technologies Information Portal</h1>
+    <p>Welcome to our portal.</p>
+    <footer>Emerging Technologies Portal Web Programming Lab</footer>
+</body>
+</html>
 
 
-# ==========================================================
-# Question 3: Constants Simulation
-# ==========================================================
-print("\n--- Question 3 ---")
-# Conventionally, constants are written in ALL CAPS
-PI = 3.14159
-GRAVITY = 9.8
-MAX_USERS = 100
-
-print("Initial values:")
-print("PI =", PI)
-print("Gravity =", GRAVITY)
-print("Max Users =", MAX_USERS)
-
-# Attempt to change constants (Python allows it, but convention warns against it)
-PI = 3.14
-GRAVITY = 10
-MAX_USERS = 150
-
-print("\nAfter modification attempt:")
-print("PI =", PI)
-print("Gravity =", GRAVITY)
-print("Max Users =", MAX_USERS)
+<!-- ==========================================================
+     Question 2: Text Formatting Tags
+     ========================================================== -->
+<p>Emerging technologies make life <b>easier</b> and work <strong>faster</strong>.</p>
+<p>They support <i>innovation</i>, <em>learning</em>, and <u>research</u>.</p>
+<p>Water is H<sub>2</sub>O. 2<sup>3</sup> = 8.</p>
+<p><mark>Artificial Intelligence</mark> is important.</p>
+<p><del>Old method</del> <ins>New method</ins> and <s>obsolete idea</s>.</p>
 
 
-# ==========================================================
-# Question 4: Data Type Identification System
-# ==========================================================
-print("\n--- Question 4 ---")
-integer_value = 25
-float_value = 12.5
-string_value = "Hello Python"
-boolean_value = True
+<!-- ==========================================================
+     Question 3: Different Types of Lists
+     ========================================================== -->
+<!-- Ordered List -->
+<h2>Ordered List</h2>
+<ol>
+    <li>Artificial Intelligence</li>
+    <li>Cloud Computing</li>
+    <li>Cyber Security</li>
+</ol>
 
-print("Integer Value:", integer_value)
-print("Type:", type(integer_value))
+<!-- Unordered List -->
+<h2>Unordered List</h2>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
 
-print("\nFloat Value:", float_value)
-print("Type:", type(float_value))
+<!-- Definition List -->
+<h2>Definition List</h2>
+<dl>
+    <dt>HTML</dt>
+    <dd>Structures a webpage.</dd>
+    <dt>CSS</dt>
+    <dd>Styles a webpage.</dd>
+    <dt>JavaScript</dt>
+    <dd>Adds interactivity to a webpage.</dd>
+</dl>
+--------------------------------------------
+   Whole Combined Code (practical1.html)
+--------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerging Technologies Portal</title>
+</head>
+<body>
+    <header>
+        <h1>Emerging Technologies Information Portal</h1>
+    </header>
 
-print("\nString Value:", string_value)
-print("Type:", type(string_value))
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>Emerging technologies make life <b>easier</b> and work <strong>faster</strong>.</p>
+            <p>They support <i>innovation</i>, <em>learning</em>, and <u>research</u>.</p>
+            <p>Water is H<sub>2</sub>O. 2<sup>3</sup> = 8.</p>
+            <p><mark>Artificial Intelligence</mark> is an important technology.</p>
+            <p><del>Old method</del> <ins>New method</ins>: <s>obsolete idea</s>.</p>
+        </section>
 
-print("\nBoolean Value:", boolean_value)
-print("Type:", type(boolean_value))
+        <section>
+            <h2>Ordered List: Technologies</h2>
+            <ol>
+                <li>Artificial Intelligence</li>
+                <li>Cloud Computing</li>
+                <li>Cyber Security</li>
+            </ol>
+        </section>
 
+        <section>
+            <h2>Unordered List: Web Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
 
-# ==========================================================
-# Question 5: Type Conversion (Casting)
-# ==========================================================
-print("\n--- Question 5 ---")
-age_input = input("Enter your age: ")
-marks_input = input("Enter your marks: ")
+        <section>
+            <h2>Definitions</h2>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Structures a webpage.</dd>
+                <dt>CSS</dt>
+                <dd>Styles a webpage.</dd>
+                <dt>JavaScript</dt>
+                <dd>Adds interaction to a webpage.</dd>
+            </dl>
+        </section>
+    </main>
 
-# Display original types (input() always returns str)
-print("\nBefore Conversion:")
-print("Age:", age_input, "| Type:", type(age_input))
-print("Marks:", marks_input, "| Type:", type(marks_input))
-
-# Explicit casting
-age_converted = int(age_input)
-marks_converted = float(marks_input)
-
-print("\nAfter Conversion:")
-print("Age (int):", age_converted, "| Type:", type(age_converted))
-print("Marks (float):", marks_converted, "| Type:", type(marks_converted))
-
-# Performing arithmetic operations
-future_age = age_converted + 5
-total_marks = marks_converted + 10
-
-print("\nArithmetic Operations:")
-print("Age after 5 years:", future_age)
-print("Marks after adding 10:", total_marks)
-
-
-# ==========================================================
-# Question 6: Implicit vs Explicit Type Conversion
-# ==========================================================
-print("\n--- Question 6 ---")
-# Implicit type conversion
-a = 10       # int
-b = 2.5      # float
-result_implicit = a + b
-print("Implicit Conversion (int + float):", result_implicit)
-print("Type:", type(result_implicit))
-
-# Error example (commented out to avoid stopping execution)
-# p = 10
-# q = "Hello"
-# print(p + q)  # Raises TypeError: unsupported operand type(s)
-
-# Explicit type conversion (correct usage)
-x = 10
-y = "5"
-y_converted = int(y)
-result_explicit = x + y_converted
-print("\nExplicit Conversion (int + str converted to int):", result_explicit)
-
-
-# ==========================================================
-# Question 7: Memory Behavior of Variables
-# ==========================================================
-print("\n--- Question 7 ---")
-# Same value assigned to two variables (points to same memory location)
-a = 10
-b = 10
-print("a id:", id(a))
-print("b id:", id(b))
-
-# Modifying one variable creates a new object in memory
-a = 20
-print("\nAfter modifying a:")
-print("a:", a, "id:", id(a))
-print("b:", b, "id:", id(b))
-
-
-# ==========================================================
-# Question 8: Swapping Variables Using Multiple Methods
-# ==========================================================
-print("\n--- Question 8 ---")
-# Method 1: Using a third variable
-a = 10
-b = 20
-print("Before swap (Method 1): a =", a, ", b =", b)
-temp = a
-a = b
-b = temp
-print("After swap (Method 1): a =", a, ", b =", b)
-
-# Method 2: Python tuple unpacking
-x = 10
-y = 20
-print("\nBefore swap (Method 2): x =", x, ", y =", y)
-x, y = y, x
-print("After swap (Method 2): x =", x, ", y =", y)
-
-
-# ==========================================================
-# Question 9: Data Type-Based Calculator
-# ==========================================================
-print("\n--- Question 9 ---")
-val1 = input("Enter first value: ")
-val2 = input("Enter second value: ")
-
-# Check if both are numeric (integers or floats)
-is_val1_numeric = val1.replace(".", "", 1).isdigit()
-is_val2_numeric = val2.replace(".", "", 1).isdigit()
-
-if is_val1_numeric and is_val2_numeric:
-    num1 = float(val1)
-    num2 = float(val2)
-    sum_result = num1 + num2
-    print("\nBoth inputs are numeric.")
-    print("Sum:", sum_result)
-elif val1.isalpha() and val2.isalpha():
-    concat_result = val1 + val2
-    print("\nBoth inputs are strings.")
-    print("Concatenation:", concat_result)
-else:
-    print("\nInvalid input types. Cannot perform operation.")
-
-
-# ==========================================================
-# Question 10: Boolean Logic and Data Types
-# ==========================================================
-print("\n--- Question 10 ---")
-student_age = 20
-student_marks = 75
-
-# Boolean conditions
-is_adult = student_age > 18
-is_pass = student_marks > 50
-
-print("Is Adult:", is_adult)
-print("Is Pass:", is_pass)
-
-# Decision making
-if is_adult and is_pass:
-    print("Eligible for admission")
-else:
-    print("Not eligible")
-
-
-# ==========================================================
-# Question 11: Temperature Converter
-# ==========================================================
-print("\n--- Question 11 ---")
-celsius = float(input("Enter temperature in Celsius: "))
-fahrenheit = (celsius * 9 / 5) + 32
-
-print(f"\nTemperature in Fahrenheit: {fahrenheit:.2f}")
+    <footer>
+        <p>&copy; Emerging Technologies Portal Web Programming Lab</p>
+    </footer>
+</body>
+</html>
